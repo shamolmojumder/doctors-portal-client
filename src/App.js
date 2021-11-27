@@ -8,11 +8,12 @@ import {
   Link
 } from "react-router-dom";
 
+
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/'>
+        <Route exact path="/">
           <Home></Home>
         </Route>
       </Switch>
