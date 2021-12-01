@@ -1,24 +1,25 @@
 import React from 'react';
 import InfoCard from '../InfoCard/InfoCard';
+import { faClock,faMapMarker,faPhone } from '@fortawesome/free-solid-svg-icons'
 const infosData=[
     {
         title:'opening hours',
         description:"we are open 7 days",
-        icon:'',
+        icon:faClock,
         background:'primary'
 
     },
     {
         title:'Visit our location',
         description:"Gulshan dhaka",
-        icon:'',
+        icon:faMapMarker,
         background:'dark'
 
     },
     {
         title:'Call us now',
         description:"+880168548452",
-        icon:'',
+        icon:faPhone,
         background:'primary'
 
     }
