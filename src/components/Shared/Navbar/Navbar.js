@@ -14,19 +14,19 @@ const Navbar = () => {
                                 <a class="nav-link ms-5 active" aria-current="page" href="./">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ms-5 text-white" href="./">About</a>
+                                <a class="nav-link ms-5 text-gray" href="./">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ms-5 text-white" href="./">Dental Service</a>
+                                <a class="nav-link ms-5 text-gray" href="./">Dental Service</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ms-5 text-white" href="./">Review</a>
+                                <a class="nav-link ms-5 text-gray" href="./">Review</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ms-5 text-white" href="./">Blog</a>
+                                <a class="nav-link ms-5 text-gray" href="./">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ms-5 text-white" href="./">Contact us</a>
+                                <a class="nav-link ms-5 text-gray" href="./">Contact us</a>
                             </li>
                         </ul>
 
