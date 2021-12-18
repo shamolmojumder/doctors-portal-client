@@ -44,7 +44,7 @@ const AppointmentForm = ({modalIsOpen,closeModal,appointmentOn,date}) => {
                 {errors.category && <p className='text-danger'>Gender is required.</p>}
                 <input {...register('age', { pattern: /\d+/ })} placeholder='age' />
                 {errors.age && <p className='text-danger'>Please enter number for age.</p>}
-                <input className='btn-brand btn ' type="submit" />
+                <input className='btn-brand btn' value="send" type="submit" />
                
             </form>
             </Modal>

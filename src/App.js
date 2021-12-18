@@ -6,6 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Login from './components/Login/Login/Login';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/appointment">
           <Appointment></Appointment>
+        </Route>
+        <Route path="/login">
+          <Login></Login>
         </Route>
       </Switch>
     </Router>
