@@ -22,20 +22,18 @@ const AppointmentForm = ({modalIsOpen,closeModal,appointmentOn,date}) => {
         data.created=new Date();
         fetch('http://localhost:5000/addAppointment',{
             method:'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
+            headers: {'Content-type': 'application/json'},
             body:JSON.stringify(data)
         })
         .then(res=>res.json())
-        .then(success=>{
+        .then(success=>{           
             console.log(success);
             if (success) {
                 closeModal();
                 alert('Appointment created successfully.')        
             }
         })
-        console.log(data);
+        // console.log(data);
     }
     return (
         <div>
