@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import AppointmentsByDate from '../AppointmentsByDate/AppointmentsByDate';
@@ -10,10 +10,20 @@ const containerStyle={
 }
 const Dashboard = () => {
     const [selectedDate,setSelectedDate]=useState(new Date())
+    const [appointments,setAppointments]=useState([])
     const handLeDateChange=date=>{
         setSelectedDate(date);
-        console.log(selectedDate,"date");
     }
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/appointmentsByDate',{
+            method:"POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({date:selectedDate})
+        })
+        .then(res=>res.json())
+        .then(data=>setAppointments(data))
+    },[selectedDate])
     return (
       <section style={containerStyle} className='container-fluid row'>
           <div className="col-md-2">
@@ -26,7 +36,7 @@ const Dashboard = () => {
                 />
           </div>
           <div className="col-md-5">
-              <AppointmentsByDate></AppointmentsByDate>
+              <AppointmentsByDate appointments={appointments}></AppointmentsByDate>
           </div>
 
       </section>
