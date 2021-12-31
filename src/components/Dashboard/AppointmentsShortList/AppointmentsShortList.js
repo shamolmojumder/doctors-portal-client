@@ -10,6 +10,7 @@ const AppointmentsShortList = ({appointments}) => {
             <th scope="col">Name</th>
             <th scope="col">Gender</th>
             <th scope="col">Age</th>
+            <th scope="col">Number</th>
             <th scope="col">Service</th>
           </tr>
         </thead>
@@ -22,6 +23,7 @@ const AppointmentsShortList = ({appointments}) => {
             <td> {appointment.firstName +' '+appointment.lastName} </td>
             <td>{appointment.category}</td>
             <td>{appointment.age}</td>
+            <td>{appointment.number}</td>
             <td>{appointment.service}</td>
           </tr>
           )

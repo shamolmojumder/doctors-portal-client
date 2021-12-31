@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Login from './components/Login/Login/Login';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import NotFound from './components/NotFound/NotFound';
+import AddDoctor from './components/Dashboard/AddDoctor/AddDoctor';
 
 
 function App() {
@@ -23,8 +25,14 @@ function App() {
         <Route path="/dashboard/appointment">
           <Dashboard/>
         </Route>
+        <Route path="/addDoctor">
+          <AddDoctor></AddDoctor>
+        </Route>
         <Route path="/login">
           <Login></Login>
+        </Route>
+        <Route path="*">
+          <NotFound></NotFound>
         </Route>
       </Switch>
     </Router>
