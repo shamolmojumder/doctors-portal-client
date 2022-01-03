@@ -2,24 +2,24 @@ import React, { useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 
 const AddDoctor = () => {
-    const [info, setInfo] = useState({})
+    const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
     const handleBlur = e => {
         const newInfo = { ...info };
         newInfo[e.target.name] = e.target.value;
-        setInfo(newInfo)
+        setInfo(newInfo);
         console.log(info);
     }
     const handleFileChange = (e) => {
         const newFile = e.target.files[0];
-        setFile(newFile)
+        setFile(newFile);
         console.log(file);
     }
     const handleSubmit = () => {
         const formData = new FormData()
-        formData.append('file', file)
-        formData.append('name', info.name)
-        formData.append('file', info.email)
+        formData.append('file', file);
+        formData.append('name', info.name);
+        formData.append('file', info.email);
 
         fetch('http://localhost:5000/addADoctor', {
             method: 'POST',
@@ -27,10 +27,10 @@ const AddDoctor = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                console.log(data);
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
             })
     }
     return (
