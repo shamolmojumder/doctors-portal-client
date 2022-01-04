@@ -4,11 +4,12 @@ import Sidebar from '../Sidebar/Sidebar';
 const AddDoctor = () => {
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
+    console.log(file)
     const handleBlur = e => {
         const newInfo = { ...info };
         newInfo[e.target.name] = e.target.value;
         setInfo(newInfo);
-        console.log(info);
+        console.log(e.target.value);
     }
     const handleFileChange = (e) => {
         const newFile = e.target.files[0];
