@@ -4,12 +4,11 @@ import Sidebar from '../Sidebar/Sidebar';
 const AddDoctor = () => {
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
-    console.log(file)
     const handleBlur = e => {
         const newInfo = { ...info };
         newInfo[e.target.name] = e.target.value;
         setInfo(newInfo);
-        console.log(e.target.value);
+        console.log(e.target.name, " ", e.target.value);
     }
     const handleFileChange = (e) => {
         const newFile = e.target.files[0];
@@ -20,7 +19,7 @@ const AddDoctor = () => {
         const formData = new FormData()
         formData.append('file', file);
         formData.append('name', info.name);
-        formData.append('file', info.email);
+        formData.append('email', info.email);
 
         fetch('http://localhost:5000/addADoctor', {
             method: 'POST',
@@ -42,7 +41,7 @@ const AddDoctor = () => {
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input onBlur={handleBlur} type="email" class="form-control" name='email' placeholder="Enter email" />
+                        <input onBlur={handleBlur}  type="email" class="form-control" name='email' id="exampleInputEmail1"  placeholder="Enter email"/>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Name</label>
