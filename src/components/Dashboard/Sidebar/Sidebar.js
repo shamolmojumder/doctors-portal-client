@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Sidebar.css'
 const Sidebar = () => {
 
@@ -12,9 +12,10 @@ const Sidebar = () => {
             <a href="#services">Services</a>
             <a href="#clients">Clients</a>
             <a href="#contact">Contact</a>
-            <Link to="/addDoctor">
+            <a href="/addDoctor">Add Doctor</a>
+            {/* <Link to="/addDoctor">
             <a>Add Doctors</a>
-            </Link>
+            </Link> */}
         </div>
 
         </div>
