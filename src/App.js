@@ -25,6 +25,9 @@ function App() {
         <Route path="/dashboard/appointment">
           <Dashboard/>
         </Route>
+        <Route path="/dashboard">
+          <Dashboard/>
+        </Route>
         <Route path="/addDoctor">
           <AddDoctor></AddDoctor>
         </Route>
